@@ -12,9 +12,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_ORG/kyeol-platform-gitops.git  # TODO: 실제 레포로 변경
+    repoURL: https://github.com/jungbin7/kyeol-platform-gitops.git
     targetRevision: main
-    path: argocd/app-of-apps/applications
+    path: argocd/app-of-apps/projects # projects 폴더를 먼저 바라보도록 수정
 
   destination:
     server: https://kubernetes.default.svc
