@@ -11,7 +11,7 @@ helmCharts:
     version: 3.11.0  # 최신 버전 확인 필요
     releaseName: metrics-server
     namespace: kube-system
-    valuesFile: ../../values/metrics-server.values.yaml
+    valuesFile: values.yaml
 
 labels:
   - pairs:
