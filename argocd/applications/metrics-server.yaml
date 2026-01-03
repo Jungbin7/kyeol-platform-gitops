@@ -1,0 +1,24 @@
+# ArgoCD Application: Metrics Server
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metrics-server
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: kyeol-platform
+  source:
+    repoURL: https://github.com/jungbin7/kyeol-platform-gitops.git
+    targetRevision: main
+    path: clusters/dev/addons/metrics-server
+  destination:
+    name: dev-cluster
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+

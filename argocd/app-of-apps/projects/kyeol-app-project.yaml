@@ -15,16 +15,12 @@ spec:
   sourceRepos:
     - "https://github.com/jungbin7/kyeol-app-gitops.git"
 
-  # 배포 대상: kyeol 네임스페이스만
+  # 배포 대상: 모든 클러스터의 kyeol 네임스페이스
   destinations:
-    - namespace: kyeol
-      server: https://kubernetes.default.svc
-    - namespace: kyeol-dev
-      server: https://kubernetes.default.svc
-    - namespace: kyeol-stage
-      server: https://kubernetes.default.svc
-    - namespace: kyeol-prod
-      server: https://kubernetes.default.svc
+    - namespace: '*'
+      server: '*'
+    - namespace: '*'
+      name: '*'
 
   # 클러스터 리소스: Namespace, ClusterRole 등 허용
   clusterResourceWhitelist:

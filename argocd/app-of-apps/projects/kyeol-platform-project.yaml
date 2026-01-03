@@ -20,12 +20,10 @@ spec:
 
   # 배포 대상 클러스터/네임스페이스
   destinations:
-    - namespace: kube-system
-      server: https://kubernetes.default.svc
-    - namespace: external-dns
-      server: https://kubernetes.default.svc
     - namespace: '*'
-      server: https://kubernetes.default.svc
+      server: '*'
+    - namespace: '*'
+      name: '*'
 
   # 클러스터 리소스 허용
   clusterResourceWhitelist:
