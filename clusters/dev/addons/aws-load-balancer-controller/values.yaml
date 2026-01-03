@@ -3,6 +3,10 @@
 
 clusterName: jung-kyeol-dev-eks
 region: ap-northeast-1
+vpcId: vpc-0c1aee661e8775414
+
+# CRD 자동 설치 활성화
+installCRDs: true
 
 serviceAccount:
   create: true
