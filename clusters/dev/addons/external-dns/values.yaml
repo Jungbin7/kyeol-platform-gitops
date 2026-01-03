@@ -1,5 +1,5 @@
 # ExternalDNS: Helm Values (DEV)
-# Route53 origin-dev-kyeol.msp-g1.click 레코드 자동 관리
+# Route53 dev.mgz-g2-u3.shop 레코드 자동 관리
 
 provider: aws
 
