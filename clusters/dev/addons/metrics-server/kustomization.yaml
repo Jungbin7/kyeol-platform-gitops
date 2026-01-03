@@ -13,6 +13,8 @@ helmCharts:
     namespace: kube-system
     valuesFile: ../../values/metrics-server.values.yaml
 
-commonLabels:
-  app.kubernetes.io/part-of: kyeol-platform
-  environment: dev
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: kyeol-platform
+      environment: dev
+    includeSelectors: true

@@ -17,6 +17,8 @@ helmCharts:
     namespace: kube-system
     valuesFile: ../../values/aws-load-balancer-controller.values.yaml
 
-commonLabels:
-  app.kubernetes.io/part-of: kyeol-platform
-  environment: dev
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: kyeol-platform
+      environment: dev
+    includeSelectors: true
