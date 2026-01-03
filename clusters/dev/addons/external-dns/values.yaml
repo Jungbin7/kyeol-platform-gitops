@@ -12,11 +12,11 @@ serviceAccount:
   create: true
   name: external-dns
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::YOUR_ACCOUNT_ID:role/jung-kyeol-dev-external-dns-role"  # TODO: 실제 ARN으로 교체
+    eks.amazonaws.com/role-arn: "arn:aws:iam::827913617839:role/jung-kyeol-dev-external-dns-role"
 
 # 도메인 필터
 domainFilters:
-  - msp-g1.click
+  - mgz-g2-u3.shop
 
 # TXT 레코드 소유자 ID (환경별 고유)
 txtOwnerId: jung-kyeol-dev
